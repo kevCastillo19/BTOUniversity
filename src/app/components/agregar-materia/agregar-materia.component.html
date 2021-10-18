@@ -1,0 +1,36 @@
+<div class="container my-5 py-3 border-bottom border-primary">
+  <div class="row">
+    <div class="col-11">
+      <h1 class="float-left">BTO University - Agregar Materia</h1>
+    </div>
+    <div class="col-1">
+      <input type="button" value="Volver" class="btn btn-info float-rigth mt-2 text-light" onClick="history.go(-1);">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form action="" [formGroup]="frmAgregarMateria"> 
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Codigo Materia</label>
+                  <input type="text" class="form-control" formControlName="codigoMateria" aria-describedby="codigoMateria">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Materia</label>
+                    <input type="text" class="form-control" formControlName="materia" aria-describedby="materia">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Docente</label>
+                    <input type="text" class="form-control" formControlName="docente" aria-describedby="docente">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Equivalencias</label>
+                    <input type="number" class="form-control" formControlName="equivalencias" aria-describedby="equivalencias">
+                  </div>
+                <button type="submit" [disabled]="!frmAgregarMateria.valid" (click)="guardarMateria()" class="btn btn-success">Agregar Materia</button>
+              </form>
+        </div>
+    </div>
+</div>

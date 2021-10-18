@@ -1,0 +1,37 @@
+<div class="container my-5 py-3 border-bottom border-primary">
+  <div class="row">
+    <div class="col-11">
+      <h1 class="float-left">BTO University - Listado de Notas</h1>
+    </div>
+    <div class="col-1">
+      <input type="button" routerLink="/" value="Inicio" class="btn btn-info float-rigth mt-2 text-light">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row mb-3">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Buscar" aria-label="Search" [(ngModel)]="search">
+    </div>
+  </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 my-3" *ngFor="let nota of notas | filter:search">
+            <div class="card">
+                <div class="card-header">
+                  {{nota.alumnoN}}
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Materia: {{nota.materiaN}}</li>
+                  <li class="list-group-item">Evaluación {{nota.evaluacion}}</li>
+                  <li class="list-group-item">Calificación: {{nota.nota}}</li>
+                </ul>
+                <div class="card-body">
+                  <button type="submit" (click)="editarNota(nota)" class="btn btn-warning mx-2">Editar</button>
+                  <button type="submit" (click)="borrarNota(nota)" class="btn btn-dark">Eliminar</button>
+                  </div>
+              </div>
+        </div>
+    </div>
+</div>
+

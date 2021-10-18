@@ -1,0 +1,36 @@
+<div class="container my-5 py-3 border-bottom border-primary">
+  <div class="row">
+    <div class="col-11">
+      <h1 class="float-left">BTO University - Listado de Materias</h1>
+    </div>
+    <div class="col-1">
+      <input type="button" routerLink="/" value="Inicio" class="btn btn-info float-rigth mt-2 text-light">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row mb-3">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Buscar" aria-label="Search" [(ngModel)]="search">
+    </div>
+  </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 my-3" *ngFor="let materia of materias | filter:search">
+            <div class="card">
+                <div class="card-header">
+                  {{materia.codigoMateria}}
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Materia {{materia.materia}}</li>
+                  <li class="list-group-item">Docente: {{materia.docente}}</li>
+                  <li class="list-group-item">Equivalencias: {{materia.equivalencias}}</li>
+                </ul>
+                <div class="card-body">
+                  <button type="submit" (click)="editarMateria(materia)" class="btn btn-warning mx-2">Editar</button>
+                  <button type="submit" (click)="borrarMateria(materia.codigoMateria)" class="btn btn-dark">Eliminar</button>
+                  </div>
+              </div>
+        </div>
+    </div>
+</div>

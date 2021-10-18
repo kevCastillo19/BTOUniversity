@@ -1,0 +1,40 @@
+<div class="container my-5 py-3 border-bottom border-primary">
+  <div class="row">
+    <div class="col-11">
+      <h1 class="float-left">BTO University - Agregar Nota</h1>
+    </div>
+    <div class="col-1">
+      <input type="button" value="Volver" class="btn btn-info float-rigth mt-2 text-light" onClick="history.go(-1);">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form action="" [formGroup]="frmAgregarNota"> 
+                <div class="mb-3">
+                  <label for="alumnoInput" class="form-label">Alumno</label>
+                  <select class="form-select" formControlName="alumnoN" aria-label="Default select example" required>
+                    <option *ngFor="let alumno of alumnos" value="{{alumno.nombre}}">{{alumno.nombre}}</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="materiaInput" class="form-label">Materia</label>
+                  <select class="form-select" formControlName="materiaN" aria-label="Default select example" required>
+                    <option *ngFor="let materia of materias" value="{{materia.materia}}">{{materia.materia}}</option>
+                  </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="evaluacionInput" class="form-label">Evaluación</label>
+                    <input type="text" class="form-control" formControlName="evaluacion" aria-describedby="evaluacion" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="notaInput" class="form-label">Nota</label>
+                    <input type="number" class="form-control" formControlName="nota" aria-describedby="nota" required>
+                  </div>
+                <button type="submit" [disabled]="!frmAgregarNota.valid" (click)="guardarNota()" class="btn btn-success">Agregar Nota</button>
+              </form>
+        </div>
+    </div>
+</div>

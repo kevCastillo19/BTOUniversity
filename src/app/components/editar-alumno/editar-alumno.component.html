@@ -1,0 +1,36 @@
+<div class="container my-5 py-3 border-bottom border-primary">
+    <div class="row">
+      <div class="col-11">
+        <h1 class="float-left">BTO University - Editar Alumno</h1>
+      </div>
+      <div class="col-1">
+        <input type="button" value="Volver" class="btn btn-info float-rigth mt-2 text-light" onClick="history.go(-1);">
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <form action="" [formGroup]="frmEditarAlumno"> 
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Codigo</label>
+                    <input type="text" class="form-control" formControlName="codigo" [(ngModel)]="alumnoOld.codigo" aria-describedby="codigo">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" formControlName="nombre" [(ngModel)]="alumnoOld.nombre" aria-describedby="nombre">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Carrera</label>
+                      <input type="text" class="form-control" formControlName="carrera" [(ngModel)]="alumnoOld.carrera" aria-describedby="apellidos">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Ciclo</label>
+                      <input type="text" class="form-control" formControlName="ciclo" [(ngModel)]="alumnoOld.ciclo" aria-describedby="ciclo">
+                    </div>
+                  <button type="submit" [disabled]="!frmEditarAlumno.valid" (click)="editarAlumno()" class="btn btn-success">Editar Alumno</button>
+                </form>
+          </div>
+      </div>
+  </div>

@@ -1,0 +1,34 @@
+<div class="container my-5 py-3 border-bottom border-primary">
+    <div class="row">
+      <div class="col-11">
+        <h1 class="float-left">Marvel API</h1>
+      </div>
+      <div class="col-1">
+        <input type="button" value="Volver" class="btn btn-info float-rigth mt- text-light" onClick="history.go(-1);">
+      </div>
+    </div>
+  </div>
+  
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Buscar Heroe" aria-label="Search" [(ngModel)]="search">
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-1 my-5" *ngFor="let personaje of allPersonajes | async | filter:search">
+              <div class="card">
+                <img src="{{personaje.thumbnail.path}}.{{personaje.thumbnail.extension}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">{{personaje.name}}</h5>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-center">Comics: {{personaje.comics.available}}</li>
+                    <li class="list-group-item text-center">Series: {{personaje.series.available}}</li>
+                    <li class="list-group-item text-center">Stories: {{personaje.stories.available}}</li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
