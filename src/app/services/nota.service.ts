@@ -28,7 +28,7 @@ export class NotaService {
   editarNota(indice: number, notaNuevo: Nota){
     let notas: Nota[] = this.notaLocalStorage;
     notas[indice] = notaNuevo;
-    localStorage.setItem('alumnos', JSON.stringify(notas));
+    localStorage.setItem('notas', JSON.stringify(notas));
     this.ruta.navigate(['listar-nota']);
   }
 

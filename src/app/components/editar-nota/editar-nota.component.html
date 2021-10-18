@@ -14,13 +14,13 @@
           <div class="col-12">
               <form action="" [formGroup]="frmEditarNota"> 
                   <div class="mb-3">
-                    <label for="alumnoInput" class="form-label">Alumno</label>
+                    <label for="alumnoInput" class="form-label">Alumno: {{notaOld.alumnoN}}</label>
                     <select class="form-select" formControlName="alumnoN" aria-label="Default select example">
                       <option *ngFor="let alumno of alumnos" value="{{alumno.nombre}}">{{alumno.nombre}}</option>
                     </select>
                   </div>
                   <div class="mb-3">
-                    <label for="materiaInput" class="form-label">Materia</label>
+                    <label for="materiaInput" class="form-label">Materia: {{notaOld.materiaN}}</label>
                     <select class="form-select" formControlName="materiaN" aria-label="Default select example">
                       <option *ngFor="let materia of materias" value="{{materia.materia}}">{{materia.materia}}</option>
                     </select>
