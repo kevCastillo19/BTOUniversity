@@ -1,27 +1,17 @@
 # BTOUniversity
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
+Este proyecto fue realizado durante mi capacitación en el PROGRAMA BE THE ONE.
 
-## Development server
+## Acerca de
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+El proyecto consta de un CRUD basico utilizando el LocalStorage para la gestion de alumnos y notas de una universidad.
+Al mismo tiempo el proyecto tiene una seccion donde se consume la API publica de Marvel para mostrar un listado de Super Heroes junto a sus detalles
 
-## Code scaffolding
+## Tecnologías
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular
+- Bootstrap
 
-## Build
+## Desarrollador
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Kevin Castillo.
